@@ -1,0 +1,19 @@
+{% extends 'music/base.html' %}
+<!--{{cat}} -->
+
+{% block body %}
+<h1>ALL PRODUCTS</h1>
+<ul>
+    {% for prod in all_products %}
+    
+    <li>
+            <h2> {{prod.product_text}} </h2><br>
+            <h3> {{prod.price}} </h3><br>
+            <img src="{{prod.pict}}"> <br> 
+            
+    </li>
+
+    
+    {% endfor %}
+</ul>
+{% endblock %}

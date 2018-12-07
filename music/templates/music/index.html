@@ -1,0 +1,13 @@
+{% extends 'music/base.html' %}
+{% block body %}
+    {% if all_categories %}
+<ul>
+    {% for cat in all_categories %}
+    <li><a href="/music/{{ cat.id }}/">{{ cat.categories_text }} </a></li>
+    {% endfor %}
+</ul>
+<p><a href="/music/all/">Show all products </a></p>
+{% else %}
+    <p>No categories are available</p>
+{% endif %}
+{% endblock %}
